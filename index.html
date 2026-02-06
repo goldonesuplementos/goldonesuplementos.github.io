@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Gold One Suplementos</title>
@@ -9,83 +8,288 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: white;
       text-align: center;
-      padding: 80px 20px;
+      color: white;
+      padding: 60px 20px;
+
+      background: radial-gradient(circle at top, #061a3a, #000);
+      background-image:
+        radial-gradient(circle, rgba(255,215,0,0.22) 1px, transparent 2px),
+        radial-gradient(circle, rgba(255,215,0,0.12) 1px, transparent 2px);
+      background-size: 140px 140px, 240px 240px;
+      background-position: 0 0, 80px 100px;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 25px;
     }
 
     h1 {
       color: gold;
-      font-size: 48px;
-      margin-bottom: 15px;
+      font-size: 58px;
+      margin: 10px 0;
+      letter-spacing: 2px;
     }
 
-    p {
+    .subtitle {
       font-size: 20px;
-      margin-bottom: 40px;
-      color: #ddd;
-      line-height: 1.6;
+      color: #d4af37;
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
 
+    .brands {
+      font-size: 15px;
+      color: gray;
+      margin-bottom: 45px;
+    }
+
+    .vials {
+      max-width: 520px;
+      margin: 25px auto 45px auto;
+    }
+
+    /* Buttons smaller + premium */
     .btn {
       display: inline-block;
-      padding: 18px 35px;
-      background: gold;
-      color: black;
-      font-size: 20px;
+      background: linear-gradient(90deg, #d4af37, #ffdf70);
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 16px;
       font-weight: bold;
-      border-radius: 12px;
+      color: black;
       text-decoration: none;
+      margin: 8px;
+      transition: 0.2s;
     }
 
     .btn:hover {
-      opacity: 0.85;
+      transform: scale(1.05);
     }
 
-    .info {
-      margin-top: 50px;
-      font-size: 16px;
-      color: gray;
-      line-height: 1.6;
+    .section {
+      max-width: 850px;
+      margin: 70px auto;
+      text-align: center;
     }
 
-    a {
+    .section h2 {
       color: gold;
-      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 32px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .section p {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* Trust blocks */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 16px;
+      padding: 22px;
+      width: 250px;
+    }
+
+    .box h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 70px;
+      font-size: 18px;
+      line-height: 2;
+      color: #ddd;
+    }
+
+    .legal {
+      font-size: 11px;
+      color: gray;
+      margin-top: 55px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Language toggle */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.65);
+      border: 1px solid rgba(255,215,0,0.4);
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      cursor: pointer;
+      color: gold;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Gold One Suplementos</h1>
+  <!-- LANGUAGE SWITCH -->
+  <div class="lang-switch" onclick="toggleLanguage()">
+    🇺🇸 English | 🇧🇷 Português
+  </div>
 
-  <p>
-    Suplementos premium. Atendimento direto no WhatsApp.<br>
-    <span style="color:gray; font-size:16px;">
-      Premium supplements. Direct support on WhatsApp.
-    </span>
+  <!-- LOGO -->
+  <img src="logo.png" class="logo" alt="Gold One Logo">
+
+  <!-- TITLE -->
+  <h1>GOLD ONE</h1>
+
+  <!-- HEADLINE -->
+  <p class="subtitle" id="headline">
+    Premium Peptide Solutions from Trusted Suppliers <br>
+    Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support
   </p>
 
-  <a class="btn"
-     href="https://wa.me/17543325722?text=Oi!%20Quero%20fazer%20um%20pedido%20na%20Gold%20One%20Suplementos."
-     target="_blank">
-     Comprar pelo WhatsApp • Order on WhatsApp
-  </a>
+  <p class="brands" id="brands">
+    We collaborate with multiple trusted brands and verified suppliers.
+  </p>
 
-  <div class="info">
-    Atendimento 100% online • 100% online service <br><br>
+  <!-- VIALS -->
+  <img src="vials.png" class="vials" alt="Gold One Peptides">
 
-    Instagram:
-    <a href="https://instagram.com/goldonesuplementos" target="_blank">
-      @goldonesuplementos
+  <!-- BUTTONS -->
+  <div>
+    <a class="btn"
+       href="https://wa.me/17543325722?text=Hello!%20I%20would%20like%20more%20information%20about%20Gold%20One."
+       target="_blank">
+       💬 WhatsApp
+    </a>
+
+    <a class="btn"
+       href="sms:+17543325722?&body=Hello!%20I%20would%20like%20more%20information%20about%20Gold%20One.">
+       📩 Text Message
     </a>
   </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2 id="aboutTitle">What Are Peptides?</h2>
+    <p id="aboutText">
+      Peptides are short chains of amino acids widely studied in scientific and laboratory environments.
+      They are researched for their potential roles in wellness, recovery, and performance-related applications.
+    </p>
+  </div>
+
+  <!-- TRUST -->
+  <div class="section">
+    <h2 id="trustTitle">Trusted Service</h2>
+
+    <div class="features">
+      <div class="box">
+        <h3 id="box1">✔ Quality Tested</h3>
+        <p id="box1Text">Carefully sourced compounds with strict quality standards.</p>
+      </div>
+
+      <div class="box">
+        <h3 id="box2">✔ Fast Support</h3>
+        <p id="box2Text">Direct communication through WhatsApp, email, and Instagram.</p>
+      </div>
+
+      <div class="box">
+        <h3 id="box3">✔ Verified Suppliers</h3>
+        <p id="box3Text">We work only with trusted partners and brands.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <div class="section">
+    <h2 id="whyTitle">Why Gold One?</h2>
+    <p id="whyText">
+      Gold One is committed to providing premium peptide solutions with a focus on quality,
+      transparency, and customer support.
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="footer">
+    📧 Email: <b>contato@goldonesuplementos.com</b><br>
+    📸 Instagram: <b>@goldonesuplementos</b>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="legal" id="disclaimer">
+    Disclaimer: All products are intended for laboratory research and educational use only.
+    Not for human consumption. Information provided is not medical advice.
+  </div>
+
+  <!-- SCRIPT LANGUAGE TOGGLE -->
+  <script>
+    let portuguese = false;
+
+    function toggleLanguage() {
+      portuguese = !portuguese;
+
+      if (portuguese) {
+        document.getElementById("headline").innerHTML =
+          "Soluções Premium em Peptídeos de Fornecedores Confiáveis <br>" +
+          "Uso Laboratorial e Educacional • Alta Pureza • Controle de Qualidade • Suporte Rápido";
+
+        document.getElementById("brands").innerHTML =
+          "Trabalhamos com diversas marcas e fornecedores verificados.";
+
+        document.getElementById("aboutTitle").innerHTML =
+          "O que são Peptídeos?";
+
+        document.getElementById("aboutText").innerHTML =
+          "Peptídeos são cadeias curtas de aminoácidos amplamente estudadas em ambientes científicos e laboratoriais.";
+
+        document.getElementById("trustTitle").innerHTML =
+          "Serviço Confiável";
+
+        document.getElementById("box1").innerHTML =
+          "✔ Qualidade Testada";
+
+        document.getElementById("box1Text").innerHTML =
+          "Compostos cuidadosamente selecionados com padrões rigorosos.";
+
+        document.getElementById("box2").innerHTML =
+          "✔ Suporte Rápido";
+
+        document.getElementById("box2Text").innerHTML =
+          "Atendimento direto via WhatsApp, email e Instagram.";
+
+        document.getElementById("box3").innerHTML =
+          "✔ Fornecedores Verificados";
+
+        document.getElementById("box3Text").innerHTML =
+          "Trabalhamos apenas com parceiros confiáveis.";
+
+        document.getElementById("whyTitle").innerHTML =
+          "Por que Gold One?";
+
+        document.getElementById("whyText").innerHTML =
+          "A Gold One oferece soluções premium com foco em qualidade, transparência e suporte ao cliente.";
+
+        document.getElementById("disclaimer").innerHTML =
+          "Aviso: Todos os produtos são destinados exclusivamente para fins laboratoriais e educacionais. Não aprovados para consumo humano.";
+      }
+
+      else {
+        location.reload();
+      }
+    }
+  </script>
 
 </body>
 </html>
