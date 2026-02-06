@@ -1,293 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gold One Suplementos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold One Peptides</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      color: white;
-      padding: 60px 20px;
-
       background: radial-gradient(circle at top, #061a3a, #000);
-      background-image:
-        radial-gradient(circle, rgba(255,215,0,0.22) 1px, transparent 2px),
-        radial-gradient(circle, rgba(255,215,0,0.12) 1px, transparent 2px);
-      background-size: 140px 140px, 240px 240px;
-      background-position: 0 0, 80px 100px;
+      color: white;
+      text-align: center;
     }
 
-    .logo {
-      width: 180px;
-      margin-bottom: 25px;
+    .overlay {
+      background: rgba(0,0,0,0.72);
+      min-height: 100vh;
+      padding: 45px 20px;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      color: gold;
     }
 
     h1 {
+      font-size: 48px;
+      margin: 15px 0;
       color: gold;
-      font-size: 58px;
-      margin: 10px 0;
       letter-spacing: 2px;
     }
 
-    .subtitle {
-      font-size: 20px;
-      color: #d4af37;
-      margin-bottom: 20px;
-      line-height: 1.5;
+    h2 {
+      font-size: 24px;
+      margin-top: 10px;
+      font-weight: 300;
     }
 
-    .brands {
+    .subtitle {
       font-size: 15px;
-      color: gray;
-      margin-bottom: 45px;
+      margin-bottom: 25px;
+      color: #ddd;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
 
     .vials {
-      max-width: 520px;
-      margin: 25px auto 45px auto;
+      margin: 35px auto;
+      max-width: 380px;
     }
 
-    /* Buttons smaller + premium */
+    .vials img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
     .btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #d4af37, #ffdf70);
-      padding: 12px 26px;
-      border-radius: 30px;
-      font-size: 16px;
+      background: rgba(255,215,0,0.15);
+      border: 1px solid gold;
+      color: gold;
       font-weight: bold;
-      color: black;
+      padding: 10px 18px;
+      border-radius: 25px;
       text-decoration: none;
-      margin: 8px;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       transition: 0.2s;
     }
 
     .btn:hover {
-      transform: scale(1.05);
+      background: gold;
+      color: black;
     }
 
-    .section {
-      max-width: 850px;
-      margin: 70px auto;
-      text-align: center;
-    }
-
-    .section h2 {
-      color: gold;
-      margin-bottom: 15px;
-      font-size: 32px;
-    }
-
-    .section p {
-      color: #ccc;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    /* Trust blocks */
-    .features {
+    .trust {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 18px;
+      margin: 55px auto;
       flex-wrap: wrap;
-      margin-top: 35px;
+      max-width: 950px;
     }
 
-    .box {
+    .trust-box {
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(212,175,55,0.45);
-      border-radius: 16px;
       padding: 22px;
-      width: 250px;
+      border-radius: 15px;
+      width: 260px;
     }
 
-    .box h3 {
+    .trust-box h3 {
+      margin: 10px 0;
       color: gold;
-      margin-bottom: 10px;
     }
 
-    /* Footer */
-    .footer {
-      margin-top: 70px;
-      font-size: 18px;
-      line-height: 2;
+    .trust-box p {
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      margin-top: 65px;
+      font-size: 32px;
+      color: gold;
+    }
+
+    .paragraph {
+      max-width: 750px;
+      margin: 18px auto;
+      font-size: 15px;
+      line-height: 1.7;
       color: #ddd;
     }
 
-    .legal {
-      font-size: 11px;
-      color: gray;
-      margin-top: 55px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+    .faq {
+      max-width: 750px;
+      margin: 40px auto;
+      text-align: left;
     }
 
-    /* Language toggle */
-    .lang-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(0,0,0,0.65);
-      border: 1px solid rgba(255,215,0,0.4);
-      padding: 10px 14px;
-      border-radius: 14px;
+    .faq p {
+      margin-bottom: 20px;
+      color: #ddd;
       font-size: 14px;
-      cursor: pointer;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 45px;
+      font-size: 16px;
+    }
+
+    .contact span {
+      display: block;
+      margin: 10px 0;
       color: gold;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      margin-top: 45px;
+      color: #aaa;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
     }
   </style>
 </head>
 
 <body>
+  <div class="overlay">
 
-  <!-- LANGUAGE SWITCH -->
-  <div class="lang-switch" onclick="toggleLanguage()">
-    🇺🇸 English | 🇧🇷 Português
-  </div>
+    <!-- Language Button -->
+    <div class="lang-switch" onclick="toggleLang()">
+      🇺🇸 English / 🇧🇷 Português
+    </div>
 
-  <!-- LOGO -->
-  <img src="logo.png" class="logo" alt="Gold One Logo">
+    <!-- Logo -->
+    <img src="logo.png" width="170" alt="Gold One Logo" />
 
-  <!-- TITLE -->
-  <h1>GOLD ONE</h1>
+    <h1>GOLD ONE</h1>
 
-  <!-- HEADLINE -->
-  <p class="subtitle" id="headline">
-    Premium Peptide Solutions from Trusted Suppliers <br>
-    Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support
-  </p>
+    <!-- Headline -->
+    <h2 id="headline">
+      Premium Peptide Solutions from Trusted Suppliers
+    </h2>
 
-  <p class="brands" id="brands">
-    We collaborate with multiple trusted brands and verified suppliers.
-  </p>
+    <!-- Subtitle -->
+    <div class="subtitle" id="subtitle">
+      Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support  
+      <br />
+      We collaborate with multiple verified brands and trusted suppliers worldwide.
+    </div>
 
-  <!-- VIALS -->
-  <img src="vials.png" class="vials" alt="Gold One Peptides">
+    <!-- Vials -->
+    <div class="vials">
+      <img src="vials.png" alt="Gold One Peptides" />
+    </div>
 
-  <!-- BUTTONS -->
-  <div>
-    <a class="btn"
-       href="https://wa.me/17543325722?text=Hello!%20I%20would%20like%20more%20information%20about%20Gold%20One."
-       target="_blank">
-       💬 WhatsApp
-    </a>
+    <!-- Buttons -->
+    <div class="buttons">
+      <a class="btn"
+         href="https://wa.me/18543325722?text=Hello%20Gold%20One!%20I%20would%20like%20more%20information."
+         target="_blank">
+        💬 WhatsApp
+      </a>
 
-    <a class="btn"
-       href="sms:+17543325722?&body=Hello!%20I%20would%20like%20more%20information%20about%20Gold%20One.">
-       📩 Text Message
-    </a>
-  </div>
+      <a class="btn"
+         href="sms:+18543325722?&body=Hello%20Gold%20One!%20I%20would%20like%20more%20information."
+         target="_blank">
+        📩 Text Message
+      </a>
+    </div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h2 id="aboutTitle">What Are Peptides?</h2>
-    <p id="aboutText">
-      Peptides are short chains of amino acids widely studied in scientific and laboratory environments.
-      They are researched for their potential roles in wellness, recovery, and performance-related applications.
-    </p>
-  </div>
-
-  <!-- TRUST -->
-  <div class="section">
-    <h2 id="trustTitle">Trusted Service</h2>
-
-    <div class="features">
-      <div class="box">
-        <h3 id="box1">✔ Quality Tested</h3>
-        <p id="box1Text">Carefully sourced compounds with strict quality standards.</p>
+    <!-- Trust Blocks -->
+    <div class="trust">
+      <div class="trust-box">
+        <h3 id="t1">Quality Tested</h3>
+        <p id="t1p">Strict sourcing standards and verified quality control.</p>
       </div>
 
-      <div class="box">
-        <h3 id="box2">✔ Fast Support</h3>
-        <p id="box2Text">Direct communication through WhatsApp, email, and Instagram.</p>
+      <div class="trust-box">
+        <h3 id="t2">Fast Support</h3>
+        <p id="t2p">Direct assistance through WhatsApp, email, and Instagram.</p>
       </div>
 
-      <div class="box">
-        <h3 id="box3">✔ Verified Suppliers</h3>
-        <p id="box3Text">We work only with trusted partners and brands.</p>
+      <div class="trust-box">
+        <h3 id="t3">Educational Focus</h3>
+        <p id="t3p">All compounds are referenced strictly for learning purposes.</p>
       </div>
     </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer" id="disc">
+      Disclaimer: All content and compounds referenced are intended strictly for laboratory research and educational use only.
+      Not for human consumption. Not a pharmaceutical product.
+    </div>
+
   </div>
 
-  <!-- WHY -->
-  <div class="section">
-    <h2 id="whyTitle">Why Gold One?</h2>
-    <p id="whyText">
-      Gold One is committed to providing premium peptide solutions with a focus on quality,
-      transparency, and customer support.
-    </p>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="footer">
-    📧 Email: <b>contato@goldonesuplementos.com</b><br>
-    📸 Instagram: <b>@goldonesuplementos</b>
-  </div>
-
-  <!-- DISCLAIMER -->
-  <div class="legal" id="disclaimer">
-    Disclaimer: All products are intended for laboratory research and educational use only.
-    Not for human consumption. Information provided is not medical advice.
-  </div>
-
-  <!-- SCRIPT LANGUAGE TOGGLE -->
+  <!-- Language Script -->
   <script>
     let portuguese = false;
 
-    function toggleLanguage() {
+    function toggleLang() {
       portuguese = !portuguese;
 
-      if (portuguese) {
-        document.getElementById("headline").innerHTML =
-          "Soluções Premium em Peptídeos de Fornecedores Confiáveis <br>" +
-          "Uso Laboratorial e Educacional • Alta Pureza • Controle de Qualidade • Suporte Rápido";
+      document.getElementById("headline").innerText =
+        portuguese
+          ? "Soluções Premium em Peptídeos com Fornecedores Confiáveis"
+          : "Premium Peptide Solutions from Trusted Suppliers";
 
-        document.getElementById("brands").innerHTML =
-          "Trabalhamos com diversas marcas e fornecedores verificados.";
+      document.getElementById("subtitle").innerText =
+        portuguese
+          ? "Compostos Educacionais e Laboratoriais • Alta Pureza • Controle de Qualidade • Suporte Rápido\nTrabalhamos com marcas verificadas e fornecedores confiáveis no mundo todo."
+          : "Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support\nWe collaborate with multiple verified brands and trusted suppliers worldwide.";
 
-        document.getElementById("aboutTitle").innerHTML =
-          "O que são Peptídeos?";
+      document.getElementById("t1").innerText =
+        portuguese ? "Qualidade Testada" : "Quality Tested";
 
-        document.getElementById("aboutText").innerHTML =
-          "Peptídeos são cadeias curtas de aminoácidos amplamente estudadas em ambientes científicos e laboratoriais.";
+      document.getElementById("t1p").innerText =
+        portuguese ? "Padrões rigorosos e controle de qualidade verificado."
+                   : "Strict sourcing standards and verified quality control.";
 
-        document.getElementById("trustTitle").innerHTML =
-          "Serviço Confiável";
+      document.getElementById("t2").innerText =
+        portuguese ? "Suporte Rápido" : "Fast Support";
 
-        document.getElementById("box1").innerHTML =
-          "✔ Qualidade Testada";
+      document.getElementById("t2p").innerText =
+        portuguese ? "Atendimento direto via WhatsApp, email e Instagram."
+                   : "Direct assistance through WhatsApp, email, and Instagram.";
 
-        document.getElementById("box1Text").innerHTML =
-          "Compostos cuidadosamente selecionados com padrões rigorosos.";
+      document.getElementById("t3").innerText =
+        portuguese ? "Foco Educacional" : "Educational Focus";
 
-        document.getElementById("box2").innerHTML =
-          "✔ Suporte Rápido";
+      document.getElementById("t3p").innerText =
+        portuguese ? "Informações fornecidas estritamente para fins educacionais."
+                   : "All compounds are referenced strictly for learning purposes.";
 
-        document.getElementById("box2Text").innerHTML =
-          "Atendimento direto via WhatsApp, email e Instagram.";
-
-        document.getElementById("box3").innerHTML =
-          "✔ Fornecedores Verificados";
-
-        document.getElementById("box3Text").innerHTML =
-          "Trabalhamos apenas com parceiros confiáveis.";
-
-        document.getElementById("whyTitle").innerHTML =
-          "Por que Gold One?";
-
-        document.getElementById("whyText").innerHTML =
-          "A Gold One oferece soluções premium com foco em qualidade, transparência e suporte ao cliente.";
-
-        document.getElementById("disclaimer").innerHTML =
-          "Aviso: Todos os produtos são destinados exclusivamente para fins laboratoriais e educacionais. Não aprovados para consumo humano.";
-      }
-
-      else {
-        location.reload();
-      }
+      document.getElementById("disc").innerText =
+        portuguese
+          ? "Aviso legal: Todo conteúdo e compostos citados são destinados exclusivamente para pesquisa laboratorial e fins educacionais. Não é para consumo humano. Não é um produto farmacêutico."
+          : "Disclaimer: All content and compounds referenced are intended strictly for laboratory research and educational use only. Not for human consumption. Not a pharmaceutical product.";
     }
   </script>
 
