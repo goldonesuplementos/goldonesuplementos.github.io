@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,232 +6,212 @@
   <title>Gold One Peptides</title>
 
   <style>
-    body{
-      margin:0;
+    body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: url("stars-bg.png") no-repeat center center fixed;
       background-size: cover;
-      color:white;
-      text-align:center;
+      color: white;
+      text-align: center;
     }
 
-    .container{
-      max-width:900px;
-      margin:auto;
-      padding:60px 20px;
-      background: rgba(0,0,0,0.55);
-      border-radius:20px;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
     }
 
-    img.logo{
-      width:120px;
-      margin-bottom:20px;
+    h1 {
+      font-size: 60px;
+      margin: 20px 0 10px;
+      color: gold;
+      letter-spacing: 2px;
     }
 
-    h1{
-      font-size:60px;
-      margin:10px 0;
-      color:gold;
-      letter-spacing:2px;
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 15px;
     }
 
-    h2{
-      font-size:28px;
-      font-weight:300;
-      margin-bottom:20px;
+    p {
+      font-size: 16px;
+      opacity: 0.9;
     }
 
-    .subtitle{
-      font-size:14px;
-      opacity:0.8;
-      margin-bottom:40px;
+    .buttons {
+      margin: 30px 0;
     }
 
-    img.vials{
-      width:320px;
-      margin:30px 0;
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 10px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
     }
 
-    .btn{
-      display:inline-block;
-      margin:15px;
-      padding:18px 45px;
-      font-size:18px;
-      font-weight:bold;
-      border-radius:40px;
-      text-decoration:none;
-      transition:0.2s;
+    .btn-whatsapp {
+      background: gold;
+      color: black;
     }
 
-    .btn-whatsapp{
-      background:gold;
-      color:black;
-      box-shadow:0 0 15px rgba(255,215,0,0.6);
+    .btn-sms {
+      border: 2px solid gold;
+      color: gold;
     }
 
-    .btn-whatsapp:hover{
-      transform:scale(1.05);
+    .btn:hover {
+      transform: scale(1.05);
     }
 
-    .btn-sms{
-      border:2px solid gold;
-      color:gold;
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
     }
 
-    .cards{
-      display:flex;
-      gap:20px;
-      margin-top:50px;
-      flex-wrap:wrap;
-      justify-content:center;
+    .card {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,215,0,0.4);
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
     }
 
-    .card{
-      flex:1;
-      min-width:220px;
-      padding:20px;
-      border-radius:15px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,215,0,0.3);
+    .card h3 {
+      color: gold;
+      margin-bottom: 10px;
     }
 
-    .card h3{
-      color:gold;
-      margin-bottom:10px;
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      opacity: 0.8;
     }
 
-    .footer{
-      margin-top:60px;
-      font-size:14px;
-      opacity:0.8;
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
     }
 
-    .lang{
-      position:fixed;
-      top:20px;
-      right:20px;
-      background:rgba(0,0,0,0.6);
-      padding:10px 15px;
-      border-radius:30px;
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid gold;
+      color: gold;
+      padding: 6px 12px;
+      margin-left: 5px;
+      cursor: pointer;
+      border-radius: 8px;
     }
 
-    .lang button{
-      background:none;
-      border:none;
-      color:white;
-      cursor:pointer;
-      font-weight:bold;
-      margin:0 8px;
-    }
-
-    .lang button:hover{
-      color:gold;
+    .lang-switch button:hover {
+      background: gold;
+      color: black;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Language Switch -->
-  <div class="lang">
+  <div class="lang-switch">
     <button onclick="setLang('en')">English</button>
     <button onclick="setLang('pt')">Português</button>
   </div>
 
   <div class="container">
 
-    <img src="logo.png" class="logo" alt="Gold One Logo"/>
-
     <h1 id="title">GOLD ONE</h1>
 
-    <h2 id="headline">Premium Peptide Solutions from Trusted Suppliers</h2>
+    <h2 id="subtitle">Premium Peptide Solutions from Trusted Suppliers</h2>
 
-    <p class="subtitle" id="subtitle">
+    <p id="desc">
       Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support
     </p>
 
-    <img src="vials.png" class="vials" alt="Peptides Vials"/>
+    <div class="buttons">
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/17543325722"
+         target="_blank">
+        Contact on WhatsApp
+      </a>
 
-    <!-- Buttons -->
-    <a id="whatsBtn"
-       class="btn btn-whatsapp"
-       href="https://wa.me/17543325722?text=Hi%20Gold%20One%2C%20I%20would%20like%20more%20information%20and%20to%20place%20an%20order."
-       target="_blank">
-       Contact on WhatsApp
-    </a>
+      <a class="btn btn-sms"
+         href="sms:+17543325722">
+        Send Text Message
+      </a>
+    </div>
 
-    <a class="btn btn-sms"
-       href="sms:+17543325722">
-       Send Text Message
-    </a>
-
-    <!-- Cards -->
     <div class="cards">
       <div class="card">
         <h3 id="c1">Quality Tested</h3>
-        <p id="c1t">Carefully sourced compounds with strict quality standards.</p>
+        <p id="c1d">Carefully sourced compounds with strict quality standards.</p>
       </div>
 
       <div class="card">
         <h3 id="c2">Fast Shipping</h3>
-        <p id="c2t">Quick processing and reliable delivery options.</p>
+        <p id="c2d">Quick processing and reliable delivery options.</p>
       </div>
 
       <div class="card">
         <h3 id="c3">Customer Support</h3>
-        <p id="c3t">Direct support through WhatsApp, email, and Instagram.</p>
+        <p id="c3d">Direct support through WhatsApp, email, and Instagram.</p>
       </div>
     </div>
 
-    <!-- About -->
-    <div class="footer">
-      <h2 id="about">What Are Peptides?</h2>
-      <p id="aboutText">
-        Peptides are short chains of amino acids widely used in laboratory research and educational applications.
-      </p>
+    <h2 style="margin-top:50px; color:gold;" id="peptides">
+      What Are Peptides?
+    </h2>
 
-      <p>📧 <b>goldonesuplementos@gmail.com</b></p>
-      <p>📸 <a href="https://instagram.com/goldonesuplementos" target="_blank" style="color:gold;">
-        @goldonesuplementos</a></p>
+    <p id="pepdesc">
+      Peptides are short chains of amino acids widely used in laboratory research and educational applications.
+    </p>
 
-      <p style="margin-top:30px;font-size:12px;opacity:0.6;">
-        Disclaimer: All products are intended for laboratory research and educational use only.
-      </p>
-    </div>
+    <footer>
+      📩 goldonesuplementos@gmail.com <br>
+      📷 <a href="https://instagram.com/goldonesuplementos" target="_blank"
+           style="color:gold; text-decoration:none;">
+           @goldonesuplementos
+      </a>
+      <br><br>
+      Disclaimer: All products are intended for laboratory research and educational use only.
+    </footer>
 
   </div>
 
   <script>
-    function setLang(lang){
-
-      if(lang==="pt"){
-        document.getElementById("headline").innerText =
+    function setLang(lang) {
+      if (lang === "pt") {
+        document.getElementById("subtitle").innerText =
           "Soluções Premium em Peptídeos de Fornecedores Confiáveis";
 
-        document.getElementById("subtitle").innerText =
+        document.getElementById("desc").innerText =
           "Compostos Educacionais e de Laboratório • Alta Pureza • Controle de Qualidade • Suporte Rápido";
 
-        document.getElementById("whatsBtn").innerText =
-          "Contato no WhatsApp";
+        document.getElementById("c1").innerText = "Qualidade Testada";
+        document.getElementById("c1d").innerText =
+          "Compostos cuidadosamente selecionados com padrões rigorosos.";
 
-        document.getElementById("whatsBtn").href =
-          "https://wa.me/17543325722?text=Oi%20Gold%20One%2C%20quero%20mais%20informações%20e%20fazer%20um%20pedido.";
+        document.getElementById("c2").innerText = "Envio Rápido";
+        document.getElementById("c2d").innerText =
+          "Processamento rápido e opções confiáveis de entrega.";
 
-        document.getElementById("c1").innerText="Qualidade Testada";
-        document.getElementById("c1t").innerText="Compostos selecionados com padrões rigorosos.";
+        document.getElementById("c3").innerText = "Suporte ao Cliente";
+        document.getElementById("c3d").innerText =
+          "Atendimento direto via WhatsApp, email e Instagram.";
 
-        document.getElementById("c2").innerText="Envio Rápido";
-        document.getElementById("c2t").innerText="Processamento rápido e entrega confiável.";
-
-        document.getElementById("c3").innerText="Suporte ao Cliente";
-        document.getElementById("c3t").innerText="Suporte direto via WhatsApp, email e Instagram.";
-
-        document.getElementById("about").innerText="O Que São Peptídeos?";
-        document.getElementById("aboutText").innerText =
-          "Peptídeos são pequenas cadeias de aminoácidos amplamente usadas em pesquisa laboratorial e aplicações educacionais.";
+        document.getElementById("peptides").innerText = "O Que São Peptídeos?";
+        document.getElementById("pepdesc").innerText =
+          "Peptídeos são pequenas cadeias de aminoácidos amplamente utilizadas em pesquisas laboratoriais e aplicações educacionais.";
       }
 
-      if(lang==="en"){
+      if (lang === "en") {
         location.reload();
       }
     }
