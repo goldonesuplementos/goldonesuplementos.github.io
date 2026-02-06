@@ -1,166 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gold One Supplements</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold One Peptides</title>
 
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;600&display=swap");
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #111, #000);
+      font-family: "Poppins", sans-serif;
+      background: #05060d;
       color: white;
       text-align: center;
     }
 
+    /* HERO SECTION */
     .hero {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
+      padding: 75px 20px;
+      background: url("stars-bg.png") no-repeat center;
+      background-size: cover;
     }
 
+    /* LOGO */
     .logo {
-      width: 160px;
-      margin-bottom: 20px;
+      width: 125px;
+      margin-bottom: 18px;
     }
 
+    /* TITLE */
     h1 {
-      font-size: 60px;
-      margin: 10px 0;
+      font-family: "Cinzel", serif;
+      font-size: 58px;
       color: gold;
-      letter-spacing: 3px;
+      margin: 0;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.55);
     }
 
+    /* SUBTITLE */
     h2 {
-      font-size: 22px;
-      font-weight: 300;
-      margin-bottom: 20px;
-      opacity: 0.9;
+      font-family: "Cinzel", serif;
+      font-size: 28px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      font-weight: 600;
     }
 
-    .subtext {
-      font-size: 15px;
-      opacity: 0.7;
-      margin-bottom: 50px;
+    /* SMALL LINE */
+    .line {
+      font-size: 14px;
+      color: #e5d28c;
+      margin-bottom: 10px;
     }
 
-    .vials {
-      width: 520px;
-      max-width: 90%;
-      margin: 40px auto;
+    .small {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+    }
+
+    /* VIALS IMAGE */
+    .bottles {
+      width: 380px;
+      max-width: 92%;
+      margin: 30px auto;
       display: block;
-      border-radius: 14px;
-      box-shadow: 0 0 40px rgba(255,215,0,0.25);
+      filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.35));
     }
 
-    .buttons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
+    /* BUTTON */
     .btn {
-      padding: 16px 28px;
-      border-radius: 12px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.2s;
+      display: inline-block;
+      margin-top: 25px;
+      padding: 17px 55px;
+      border-radius: 60px;
+      background: linear-gradient(90deg, #d4af37, #ffeaa0);
+      color: black;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+      transition: 0.25s;
     }
 
     .btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
-    .btn-whatsapp {
-      background: gold;
-      color: black;
+    /* FEATURES */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 70px 20px;
+      background: rgba(0, 0, 0, 0.55);
     }
 
-    .btn-sms {
-      background: transparent;
-      border: 2px solid gold;
+    .card {
+      width: 280px;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 215, 0, 0.35);
+      background: rgba(10, 15, 30, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
       color: gold;
+      margin-bottom: 12px;
+      font-size: 20px;
     }
 
-    .section {
-      margin-top: 90px;
-      padding: 60px 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+    .card p {
+      font-size: 14px;
+      opacity: 0.85;
+      line-height: 1.5;
     }
 
-    .section h3 {
-      font-size: 30px;
-      margin-bottom: 15px;
+    /* WHY SECTION */
+    .why {
+      padding: 65px 20px;
+      background: url("stars-bg.png") no-repeat center;
+      background-size: cover;
+    }
+
+    .why h2 {
+      font-family: "Cinzel", serif;
+      font-size: 42px;
       color: gold;
+      margin-bottom: 18px;
+      text-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
     }
 
-    .section p {
-      max-width: 650px;
+    .why p {
+      max-width: 720px;
       margin: auto;
-      font-size: 16px;
-      opacity: 0.75;
-      line-height: 1.6;
+      opacity: 0.9;
+      line-height: 1.7;
+      font-size: 15px;
     }
 
+    /* FOOTER */
     footer {
-      margin-top: 80px;
-      padding: 30px;
+      padding: 45px 20px;
+      background: rgba(0, 0, 0, 0.85);
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .disclaimer {
+      margin-top: 25px;
       font-size: 12px;
-      opacity: 0.5;
+      opacity: 0.55;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <img src="logo.png" class="logo">
+  <!-- HERO -->
+  <header class="hero">
+
+    <img src="logo.png" class="logo" alt="Gold One Logo" />
 
     <h1>GOLD ONE</h1>
 
-    <h2>Premium Peptide Solutions from Trusted Suppliers</h2>
+    <h2>
+      Premium Peptide Solutions <br />
+      from Trusted Suppliers
+    </h2>
 
-    <p class="subtext">
+    <p class="line">
       Laboratory & Educational Compounds • High Purity • Quality Control • Fast Support
     </p>
 
-    <img src="vials.png" class="vials">
+    <p class="small">
+      We work with multiple trusted brands and suppliers.
+    </p>
 
-    <div class="buttons">
-      <a href="https://wa.me/18543325722" target="_blank">
-        <button class="btn btn-whatsapp">WhatsApp Contact</button>
-      </a>
+    <img src="vials.png" class="bottles" alt="Peptide Vials" />
 
-      <a href="sms:+18543325722">
-        <button class="btn btn-sms">Text Message</button>
-      </a>
+    <a class="btn" href="https://wa.me/YOURNUMBER">
+      Contact on WhatsApp
+    </a>
+
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="card">
+      <h3>Quality Tested</h3>
+      <p>Carefully sourced compounds with strict quality standards.</p>
     </div>
-  </div>
 
-  <div class="section">
-    <h3>What Are Peptides?</h3>
+    <div class="card">
+      <h3>Fast Shipping</h3>
+      <p>Quick processing and reliable delivery options.</p>
+    </div>
+
+    <div class="card">
+      <h3>Customer Support</h3>
+      <p>Direct support through WhatsApp, email, and Instagram.</p>
+    </div>
+
+  </section>
+
+  <!-- WHY -->
+  <section class="why">
+    <h2>Why Gold One?</h2>
+
     <p>
-      Peptides are short chains of amino acids widely studied in scientific and laboratory environments.
-      They are provided strictly for research and educational purposes only.
+      Gold One is committed to providing premium peptide solutions with a focus on
+      quality, transparency, and customer service.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
-    <h3>Why Gold One?</h3>
-    <p>
-      Gold One works with multiple trusted suppliers worldwide, focusing on transparency, quality control,
-      and fast customer support.
-    </p>
-  </div>
-
+  <!-- FOOTER -->
   <footer>
-    Disclaimer: All compounds are intended strictly for laboratory research and educational use only.
-    Not for human consumption. Not a pharmaceutical product.
+    <p>📩 contato@goldonesuplementos.com</p>
+    <p>📷 @goldonesuplementos</p>
+
+    <p class="disclaimer">
+      Disclaimer: All products are intended for laboratory research and educational use only.
+    </p>
   </footer>
 
 </body>
